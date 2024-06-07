@@ -1,0 +1,169 @@
+:root {
+    background-color: #333; /* Dark background */
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eee; /* Light text */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 60px;
+    color: white; /* Light blue */
+    margin-bottom: 60px;
+}
+
+h1 > span {
+    font-size: 20px;
+    font-weight: 250;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-weight: 350;
+}
+
+h3 {
+    font-size: 35px;
+    font-weight: 250;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Adjust top padding to move content upward */
+    flex-direction: column; /* To stack items vertically */
+}
+
+@keyframes textHighlight {
+    100% {
+        color: white; /* Light blue */
+        text-shadow: 0 0 10px gray; /* Light blue text shadow */
+    }
+    100% {
+        color: white; /* Light blue */
+        text-shadow: 0 0 20px gray; /* Light blue text shadow */
+    }
+}
+
+#Difficulty {
+    font-size: 60px;
+    color: white; /* Light blue */
+    margin-bottom: 60px;
+    position: relative;
+    animation: textHighlight 3s infinite alternate;
+    text-align: center; /* Center the text */
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+}
+
+.btn {
+    font-size: 30px;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    border: 1.6px solid #1e90ff; /* Light blue border */
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #1e90ff; /* Light blue text */
+    background-color: transparent;
+    position: relative; /* Required for pseudo-element positioning */
+    overflow: hidden; /* Hide overflow for the animation */
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 25px 0 rgba(30, 144, 255, 0.5); /* Light blue shadow */
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#backbutton {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    font-size: 25px; /* Adjust as needed */
+    padding: 16px; /* Adjust as needed */
+    border: 1.6px solid black; /* Light blue border */
+    text-align: center;
+    text-decoration: none;
+    color: white; /* Light blue text */
+    background-color: transparent;
+}
+
+#backbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 25px 0 black; /* Light blue shadow */
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
+
+#backbutton[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#easy {
+    color: white;
+    background-color: transparent; /* Dark green */
+    border: 1.6px solid black; /* Light blue border */
+}
+
+#easy:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 25px 0 gray; /* Light green shadow */
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
+
+#medium {
+    color: white;
+    border: 1.6px solid black; /* Light blue border */
+    background-color: transparent; /* Yellow */
+}
+
+#medium:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 25px 0 gray; /* Light green shadow */
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
+
+#hard {
+    color: white;
+    border: 1.6px solid black; /* Light blue border */
+    background-color: transparent; /* Red */
+}
+
+#hard:hover {
+    cursor: pointer;
+    box-shadow: 0 6.4px 25px 0 gray; /* Light green shadow */
+    transform: translateY(-1.6px);
+    transition: transform 150ms;
+}
